@@ -81,6 +81,17 @@ To run the unit tests, use the following command:
 npm test
 ```
 
+## Run with Docker
+
+Build the Docker image (run this command in the same directory as the Dockerfile)
+```bash
+docker build -t simple-node-api .
+```
+Run the Docker container based on the image
+```bash
+docker run -p 3000:3000 --env-file .env simple-node-api
+```
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to contribute to the project, please create a pull request.
