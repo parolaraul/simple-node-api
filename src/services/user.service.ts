@@ -1,4 +1,4 @@
-import {createUser, findUserByUsername, getAllUsers} from "../databases/mongo.database";
+import {createUser, findUserByUsername, getAllUsers} from "../databases/fake.database";
 import jwt from "jsonwebtoken";
 import {AuthError} from "../exceptions/auth.error";
 import * as fs from "fs";
@@ -28,7 +28,7 @@ class UserService {
         }
     }
 
-    verifyToken(token: any): any {
+    verifyToken(token: string): any {
         return jwt.verify(token, PrivateKey);
     }
 
