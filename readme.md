@@ -25,13 +25,13 @@ This repository contains a simple Node.js API project that demonstrates best pra
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/parolaraul/simple-node-api.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd your-project
+   cd simple-node-api
    ```
 
 3. Install the dependencies:
@@ -39,6 +39,13 @@ This repository contains a simple Node.js API project that demonstrates best pra
    ```bash
    npm install
    ```
+
+3.1 Create Private Key
+
+This will generate a `privateKey.key` file in the project directory.
+```bash
+simple-node-api> openssl genrsa -out privateKey.key 2048
+```
 
 4. Set up the environment variables:
 

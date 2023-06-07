@@ -13,10 +13,10 @@ import notFoundErrorHandler from "./handlers/not-found-error.handler";
 const app = express();
 
 // Middlewares
-app.use(bodyParser.json({limit: '5000mb'}));
+app.use(bodyParser.json({limit: '3000mb'}));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(helmet());
-app.use(cors());
+app.use(cors({origin: config.FRONTEND_URL}));
 app.use(log.middleware());
 
 // Health check
